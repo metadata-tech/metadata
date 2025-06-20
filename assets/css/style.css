@@ -156,10 +156,10 @@ h6 {
   letter-spacing: 0px;
   font-weight: 600;
   line-height: 1;
-  font-size: 18px;
+  font-size: 15px;
   width: 20%;
   text-align: left;
-  padding: 8px;
+  padding: 10px 0 10px 30px;
 }
 
 /*--------------------------------------------------------------
@@ -598,7 +598,7 @@ section {
 .clients .swiper-slide img {
   opacity: 0.5;
   transition: 0.3s;
-  filter: grayscale(100);
+  /* filter: grayscale(100); */
 }
 
 .clients .swiper-slide img:hover {
