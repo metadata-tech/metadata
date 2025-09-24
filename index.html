@@ -27,6 +27,27 @@
 
   <!--  Main CSS File -->
   <link href="assets/css/style.css?2" rel="stylesheet">
+
+  <style>
+    .cursor-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ffc451;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.8;
+      transform: translate(-50%, -50%);
+      animation: fadeOut 0.8s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -150,6 +171,7 @@
             <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/client-9.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-10.png" class="img-fluid" alt=""></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -260,6 +282,11 @@
                 <i class="bx bxs-right-arrow-circle bx-fade-right"></i>
                 <h4 class="mb-0">APLIKASI MOBILE SISTEM PERLINDUNGAN DATA PERIBADI (SPDP)</h4>
                 <p>Jabatan Perlindungan Data Peribadi (JPDP)</p>
+              </div>
+              <div class="icon-box mt-4" data-aos="zoom-in" data-aos-delay="150">
+                <i class="bx bxs-right-arrow-circle bx-fade-right"></i>
+                <h4 class="mb-0">INTEGRATED SERVICE & DISCIPLINARY SYSTEM (TERAS)</h4>
+                <p>Suruhanjaya Perkhidmatan Awam (SPA)</p>
               </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
@@ -434,6 +461,18 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.querySelector("#hero").addEventListener("mousemove", function(e) {
+      const dot = document.createElement("div");
+      dot.className = "cursor-dot";
+      dot.style.left = e.pageX + "px";
+      dot.style.top = e.pageY + "px";
+      document.body.appendChild(dot);
+      
+      setTimeout(() => dot.remove(), 800); // remove old dots
+    });
+  </script>
 
 </body>
 
